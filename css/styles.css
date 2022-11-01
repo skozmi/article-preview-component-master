@@ -1,0 +1,38 @@
+ /* Box sizing rules */
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }
+
+ /* Remove default margin */
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ p {
+     margin: 0;
+ }
+
+ /* Make images easier to work with */
+ img,
+ picture {
+     display: block;
+     max-width: 100%;
+ }
+
+ body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+ }
+ 
+ .attribution {
+     font-size: 11px;
+     text-align: center;
+ }
+
+ .attribution a {
+     color: hsl(228, 45%, 44%);
+ }
