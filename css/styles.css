@@ -26,6 +26,20 @@
     font-family: 'Manrope', sans-serif;
     font-size: 13px;
     font-weight: 500;
+    background-color: rgb(236, 242, 248);
+    background-color: hsl(210, 46%, 95%);
+ }
+
+ /*container*/
+ main {
+    padding: 10% 20%;
+    margin: 0 auto;
+    min-height: 80vh;
+ }
+
+ .text-container {
+    padding: 3%;
+    background-color: #fff;
  }
  
  .attribution {
@@ -33,6 +47,28 @@
      text-align: center;
  }
 
- .attribution a {
-     color: hsl(228, 45%, 44%);
+ /*heading and paragraph*/
+ .main-heading, .icon-name {
+    font-weight: 700;
+    color: rgb(72, 85, 106);
+    color: hsl(217, 19%, 35%);
  }
+
+ .main-heading {
+    font-size: 1.2rem;
+ }
+
+ .icon-name {
+    font-size: 1rem;
+ }
+
+ p {
+    color: rgb(109, 127, 151);
+    color: hsl(214, 17%, 51%);
+ }
+
+ .attribution a {
+    color: #3e52a3;
+    color: hsl(228, 45%, 44%);
+ }
+
