@@ -1,74 +1,247 @@
- /* Box sizing rules */
- *,
- *::before,
- *::after {
-     box-sizing: border-box;
+/* Box sizing rules and remove default margin and padding*/
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+   display: block;
+   max-width: 100%;
+}
+
+html {
+   margin: auto;
+   max-width: 1440px;
+   min-width: 375px;
+}
+
+body {
+   align-items: center;
+   background-color: rgb(236, 242, 248);
+   background-color: hsl(210, 46%, 95%);
+   display: flex;
+   flex-direction: column;
+   font-family: 'Manrope', sans-serif;
+   font-size: 13px;
+   font-weight: 500;
+   justify-content: center;
+   margin: auto;
+   min-height: 100vh;
+   width: 90%;
+}
+
+/*container*/
+main {
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 5px 10px 18px #cccccf;
+   margin-top: 3em;
+   position: relative;
+   width: 280px;
+}
+
+.text-container {
+   padding: 2em;
+} 
+
+.profile {
+   align-items: center;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+}
+
+footer {
+   font-size: 11px;
+   margin-top: 3em;
+   text-align: center;
+}
+
+/*images*/
+.head-image {
+   border-radius: 10px 10px 0 0;
+   width: 100%; 
+}
+
+.icon-img {
+   border-radius: 50%;
+   margin-right: 1em;
+   width: 50px;
+}
+
+/*heading and paragraph*/
+.main-heading {
+   color: rgb(72, 85, 106);
+   color: hsl(217, 19%, 35%);
+   font-size: 1.1em;
+   font-weight: 700;
+}
+
+.main-paragraph {
+   color: rgb(109, 127, 151);
+   color: hsl(214, 17%, 51%);
+   font-weight: 500;
+   line-height: 1.5em;
+   padding: 1em 0;
+}
+
+.icon-name {
+   align-items: flex-start;
+   color: rgb(72, 85, 106);
+   color: hsl(217, 19%, 35%);
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   font-size: .9rem;
+   font-weight: 700;
+   justify-content: center;
+}
+
+span {
+   color: rgb(109, 127, 151);
+   color: hsl(214, 17%, 51%);
+   font-weight: 500;
+}
+
+ .tooltiptext a {
+   color: #fff;
  }
 
- /* Remove default margin */
- body,
- h1,
- h2,
- h3,
- h4,
- p {
-     margin: 0;
+.tooltiptext a:hover {
+   color: rgb(109, 127, 151);
+   color: hsl(214, 17%, 51%);
+}
+
+.attribution a {
+   color: #3e52a3;
+   color: hsl(228, 45%, 44%);
+}
+
+/*button*/
+.share-btn, .share-btn2 {
+   align-items: center;
+   background-color: rgb(236, 242, 248);
+   background-color: hsl(210, 46%, 95%);
+   border: none;
+   border-radius: 50%;
+   color: rgb(109, 127, 151);
+   color: hsl(214, 17%, 51%);
+   cursor: pointer;
+   display: flex;
+   height: 2rem;
+   justify-content: center;
+   object-fit: contain;
+   width: 2rem;
  }
 
- /* Make images easier to work with */
- img,
- picture {
-     display: block;
-     max-width: 100%;
+ /*tooltip*/
+ .tooltiptext {
+   align-items: center;
+   background-color: rgb(72, 85, 106);
+   background-color: hsl(217, 19%, 35%);
+   border-radius: 0 0 10px 10px;
+   bottom: 0;
+   color: #fff;
+   display: flex;
+   flex-direction: row;
+   height: 15%;
+   justify-content: flex-start;
+   left: 0;
+   padding: 1em 2em;
+   position: absolute;
+   width: 100%;
  }
 
- body {
-    font-family: 'Manrope', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
+ .tooltiptext p {
+    color: rgb(236, 242, 248);
+    color: hsl(210, 46%, 95%);
+   letter-spacing: 0.4em;
+   margin-right: 1em;
+ }
+
+ .icons {
+   align-items: center;
+   display: flex;
+   flex: 1;
+   flex-direction: row;
+   gap: 1em;
+   justify-content: flex-start;
+ }
+
+ .active-state {
+   display: none;
+ }
+
+ .tooltip-btn {
     background-color: rgb(236, 242, 248);
     background-color: hsl(210, 46%, 95%);
- }
-
- /*container*/
- main {
-    padding: 10% 20%;
-    margin: 0 auto;
-    min-height: 80vh;
- }
-
- .text-container {
-    padding: 3%;
-    background-color: #fff;
- }
- 
- .attribution {
-     font-size: 11px;
-     text-align: center;
- }
-
- /*heading and paragraph*/
- .main-heading, .icon-name {
-    font-weight: 700;
     color: rgb(72, 85, 106);
     color: hsl(217, 19%, 35%);
  }
 
- .main-heading {
-    font-size: 1.2rem;
+ @media only screen and (min-width: 680px) {
+   main {
+      width: 360px;
+   }
  }
+ 
+@media only screen and (min-width: 992px) {
+   main {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      height: 280px;
+      margin-top: 0;
+      width: 650px;
+   }
 
- .icon-name {
-    font-size: 1rem;
+   .head-image {
+      border-radius: 10px 0 0 10px;
+      height: 280px;
+      object-fit: cover;
+      object-position: left;
+   }
+
+   .text-container {
+      padding: 1.5em;
+   }
+
+   .main-heading {
+      font-size: 1.6em;
+   }
+
+   .tooltiptext {
+      border-radius: 10px;
+      bottom: 7em;
+      color: #fff;
+      left: 39.5em;
+      width: min-content;
+   }
+
+   .tooltiptext::after {
+      border-color: rgb(72, 85, 106) transparent transparent transparent;
+      border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+      border-style: solid;
+      border-width: 5px;
+      content: "";
+      left: 50%;
+      margin-left: -5px;
+      position: absolute;
+      top: 100%;
+   }
+
+   .share-btn2 {
+      display: none;
+   }
+
+   .tooltip-btn {
+      background-color: rgb(72, 85, 106);
+      background-color: hsl(217, 19%, 35%);
+      color: rgb(236, 242, 248);
+      color: hsl(210, 46%, 95%);
+    }
  }
-
- p {
-    color: rgb(109, 127, 151);
-    color: hsl(214, 17%, 51%);
- }
-
- .attribution a {
-    color: #3e52a3;
-    color: hsl(228, 45%, 44%);
- }
-
